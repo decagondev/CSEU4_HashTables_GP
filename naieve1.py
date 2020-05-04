@@ -24,6 +24,7 @@ def my_hash3(s):
 
     for b in nums:
         sum += b
+        sum &= 0xffffffff # clamp to 32 bits
 
     return sum
 
