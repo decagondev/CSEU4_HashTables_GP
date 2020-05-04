@@ -3,13 +3,18 @@
 ## The Problem With Arrays
 
 What is the problem we are trying to solve?
-- With a list / array it is `O(n)` to search.
+- With a list / array it is `O(n)` to linear search and `O(log n)` for a binary search.
 
 ```python
 arr = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit" ]
 #        0         1        2       3      4           5              6          7    
 ```
 
+- Can we do better?
+YES!
+
+lookup with `O(1)` time complexity using a magic function?
+- 
 
 ## Hash Functions
 
