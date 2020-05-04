@@ -19,6 +19,10 @@ lookup with `O(1)` time complexity using a magic function?
 ## Hash Functions
 
 What is a hash function?
+- we can input a string
+- it will output a number
+- it has to be deterministic
+
 
 
 ## Map the hash!
