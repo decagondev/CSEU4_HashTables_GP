@@ -45,3 +45,34 @@ To Get:
 2. Mod the hash value with the table size to get the index
 3. Return the value at this index
 
+
+
+## LLC
+
+```
+Slot
+Index    Chain (LL)
+-----    -------------------------------------------
+0        -> ({ key: "qux", val: 10 })
+1        -> ({ key: "foo", val: 12 }) -> ({ key: "plugh", val: 20 })
+2        -> ({ key: "bar", val: 30 }) -> ({ key: "baz", val: 999 }) -> ({ key: "xyzzy", val: 50 })
+3        -> None
+```
+
+```python
+
+# Put
+put("foo", 12) # hash to 1
+put("bar", 30) # hash to 2
+put("baz", 999) # hashes to 2 (collision!)
+put("qux", 10) # hash to 0
+put("plugh", 20) # hash to 1 (Collision!)
+put("xyzzy", 50) # hash to 2 (Collision!)
+
+# Get
+get("foo") # 1 => 12
+get("bar") # 2 => 30
+get("baz") # 2 C -> move to heads next => 999
+```
+
+```
