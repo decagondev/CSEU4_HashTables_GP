@@ -32,5 +32,16 @@ The numbers that we have generated could get fairly large and we need a way to t
 Think of ways to do this geven a finite size of a list to turn the number in to one clamped to a range
 
 
+## Summary
+Hash Table has mthods / functions to put data in to it and to get data out of it
 
+To Put:
+1. Run the key string through a hashing function to get a hash value
+2. Mod the hash value with the table size to get the index
+3. Store the value at this index
+
+To Get:
+1. Run the key string through a hashing function to get a hash value
+2. Mod the hash value with the table size to get the index
+3. Return the value at this index
 

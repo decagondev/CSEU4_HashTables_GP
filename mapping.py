@@ -25,19 +25,31 @@ h = my_hash("World")
 i = h % len(hash_table)
 hash_table[i] = "Some other World value"
 
-# get value from the hash table at the key
-# O(1)
-h = my_hash("World")
+# # get value from the hash table at the key
+# # O(1)
+# h = my_hash("World")
+# i = h % len(hash_table)
+# v = hash_table[i]
+# print(v)
+
+# # get value from the hash table at the key
+# # O(1)
+# h = my_hash("Frogs")
+# print(h)
+# i = h % len(hash_table)
+# v = hash_table[i]
+# print(v)
+
+
+# delete
+h = my_hash("Hello")
 i = h % len(hash_table)
-v = hash_table[i]
-print(v)
+hash_table[i] = None
 
 # get value from the hash table at the key
 # O(1)
-h = my_hash("Frogs")
-print(h)
+h = my_hash("Hello")
 i = h % len(hash_table)
 v = hash_table[i]
 print(v)
-
 # print(hash_table)
