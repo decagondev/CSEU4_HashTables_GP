@@ -30,17 +30,18 @@ def delete(key):
 
 if __name__ == "__main__":
 
-    put("Hello", "Hello Value")
-    put("World", "World Value")
-    put("foo", "foo value")   # "foo" hashes to same index as "Hello"
-                            # AKA "foo collides with Hello"
+    # put("Hello", "Hello Value")
+    # put("World", "World Value")
+    # put("foo", "foo value")   # "foo" hashes to same index as "Hello"
+    #                         # AKA "foo collides with Hello"
 
-    print(hash_table)
+    # print(hash_table)
 
-    v = get("Hello")
-    print(v) # "Hello Value"
+    # v = get("Hello")
+    # print(v) # "Hello Value"
 
-    # Get "Frogs" from the table
-    # Doesn't exist!
-    v = get("Frogs")
-    print(v)  # "None"
+    # # Get "Frogs" from the table
+    # # Doesn't exist!
+    # v = get("Frogs")
+    # print(v)  # "None"
+    pass
