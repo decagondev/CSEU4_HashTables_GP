@@ -21,3 +21,13 @@
 - Collision Resolution by Chaining Talk
 - Linked List Refresher
 - Wrap Up
+
+## Day 3
+- The Problem with Overloading in Hash Tables
+- What is the Hash Table Load Factor and what can we do with it?
+- 5 min break
+- Hash Applications : A Web Client Cache
+- 5 min break
+- Birthday Paradox [Time Permitting]
+- Wrap Up
+

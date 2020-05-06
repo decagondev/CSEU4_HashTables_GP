@@ -75,4 +75,59 @@ get("bar") # 2 => 30
 get("baz") # 2 C -> move to heads next => 999
 ```
 
+## Load Factor & Resizing
+
+### The problem with overloaded Hash Tables
+
+Let's go over load factor
+
+- Perfectly Loaded Hash Table
+    - Absolutely `O(1)` lookups
+
 ```
+0 |-> D
+1 |-> H
+2 |-> A
+3 |-> C
+4 |-> G
+5 |-> B
+6 |-> E
+7 |-> F
+```
+
+- Heavily Loaded Hash Table
+    - Getting Worse...
+
+```
+0 |-> D -> M
+1 |-> H
+2 |-> A -> I
+3 |-> C -> J -> L -> N
+4 |-> G
+5 |-> B -> O
+6 |-> E -> K -> P
+7 |-> F
+```
+
+- Degenerately Loaded Hash Table
+
+```
+0 |-> D -> M -> Q
+1 |-> H -> R -> X -> Y
+2 |-> A -> I -> 0
+3 |-> C -> J -> L -> N -> Z
+4 |-> G -> S -> U
+5 |-> B -> O -> 1 -> 2
+6 |-> E -> K -> P -> W
+7 |-> F -> T -> V
+```
+
+### Todays Assignment
+
+- Today you'll be implementing automatic hash table resizing.
+
+- We will not be going over the code in class.
+
+- We're just going to describe the algorithm.
+
+*TODO:* ...
