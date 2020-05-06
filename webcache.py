@@ -22,6 +22,8 @@
 # what imports will we need
 # https://docs.python.org/3/library/urllib.request.html#module-urllib.request
 import urllib.request
+# https://docs.python.org/3/library/datetime.html
+import datetime
 
 # a class to hold each entry
 class CacheEntry:
@@ -33,16 +35,18 @@ class CacheEntry:
     def __init__(self, url, data):
         self.url = url
         self.data = data
+        self.timestamp = datetime.datetime.now().timestamp()
 
 # a cache
 cache = {}
 
-# how long will we keep each item in the cache? TODO:
+# how long will we keep each item in the cache?
+CACHE_EXPIRY_SECONDS = 30
 
 # make a REPL
 while True:
     # take input from user
-    url = input("Enter a URL: ")
+    url = input("Enter a URL in the format (http://www.example.com/): ")
 
     # set some data to None
     data = None
@@ -51,8 +55,15 @@ while True:
     if url in cache:
         # set our entry to the cache at key
         entry = cache[url]
-        # set data to entry.data
-        data = entry.data
+
+        # has the data expired?
+        # work out current time as a time stamp
+        current_time = datetime.datetime.now().timestamp()
+
+        if current_time - entry.timestamp < CACHE_EXPIRY_SECONDS:
+            print("Getting from Cache!")
+            # set data to entry.data
+            data = entry.data
 
     # check if data is None
     if data is None:
