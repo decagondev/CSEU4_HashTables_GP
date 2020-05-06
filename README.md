@@ -131,3 +131,70 @@ Let's go over load factor
 - We're just going to describe the algorithm.
 
 *TODO:* ...
+
+### What is Hash Table Load Factor?
+
+`Number of Elements / Number of Slots (buckets)`
+
+- if Load Factor > 0.7 (70%) then Grow
+- if Load Factor < 0.2 (20%) then Shrink
+
+*Example*
+```Python
+# if we have 32 slots and 23 elements then the algorithm applied will tell us that we have a load factor of 0.72
+e = 9
+s = 8
+lf = e / s
+print(lf)
+```
+
+### Computing the Hash Table
+- run through the whole table counting elements
+    - takes too long
+- keep terack of total items in the table. as we put or delete them
+    - remember that put might not increase the in the case of overwriting a value
+        - in that case the total will remain the same
+
+    - with the maitained value we can compute load factor at any time
+        - you always know how many slots you have
+
+
+### Growing the hash table based on load
+- each time we put, we should check the load factor to see if it should expand / grow
+    - if the load factor is over the max (0.7) it is time to rehash (or resize)
+
+- Process:
+    1. make a new hash table area, *double* the size of the previous
+        - Why Double?
+            - it is a costly operation to do
+            - make it infrequent
+            - in absence of any other good reason, it kepps the time complexity easy to compute
+                - could be any factor
+                - doubling is extremely common
+    
+    2. Go through the old hash table removing elements, and putting the removed elements in to the new hash table
+        - How do you iterate through all items in the old hash table?
+            - go through each linked list item in each hashtable bucket
+                - insert them into the new hash table area
+        
+        - what is the time complexity?
+            - `O(m)` `m` being thwe number of items in the hash table
+
+    3. Forget about the old hash table let the garbage collector clean it up
+
+    ### Shrinking the hash table based on load
+    - Each time you delete, you will check the load to see if it should contract (shrink)
+        - if the load is under the min (0.2) it is time to *rehash* / resize
+
+    - the same thing as expanding, except we want the new table to have half the capacity of the old
+
+    - for the assignment, we will say that `8` is the minimum size.
+        - don't want to kepp dividing the table down to zero
+
+    
+
+
+
+
+
+
