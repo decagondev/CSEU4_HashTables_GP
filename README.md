@@ -222,9 +222,12 @@ print(lf)
         - Store
 - Can apply to cases where you have to index a number of records
     - Show me all the people whose age is 30
-    - Dave: age of all people with the same age
+        - Dave: age of all people with the same age
+    -  A search engine with a new indexing algorithm
+        - 'max element in the table' for fast lookups. 
 - Can apply to cases where you want to remove duplicates
     - since there can only be one key. we can add the same key over and over and there will still be only 1 copy of that key
+    - eg: voting App
 - Can be used to track counts
     - Key is the `Item` and the value is the `count`
 
