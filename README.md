@@ -234,13 +234,40 @@ print(lf)
 ### Challenges / Demos
 
 - *Memoization*
+    - `Fib(n)` Recursive
+        - Why is it slow?
+        - Redundant Calculations
+        - keep calling `fib(n)`
+    
+    - any functions whare we keep getting the same data for a particular call
+        - for given args, remember the result of the function
+        - when we call the function with the same args, just return the previously computed value
 
 - *Lookup Tables*
+    - Inverse Square Root Lookup Table
+    - same concept as memoization
+    - can be computed ahead of time
+    - or it can be computed as needed
 
 - *Sorting*
+    - it is common to sort lists
+    - what if we want to sort a dictionary?
+    - you can sort it by key
+    - you could sort it by value
+    - you have to turn it in to in to a list of key/value tuples
+    - you can use a lambda to specify the values to use for sorting
 
 - *Letter Count*
+    - Using the letter as a key
+    - keep track of the count as we go
 
 - *Indexing*
+- for a list of employee records, build an index and quickly report all people in a particular dept
 
 - *Transposition Table*
+    - if you have data in one form but need to transform it in to another
+    - along the lins of ROT13 or a caesars cipher
+        - Letters are substituted for other letters
+        - *Aside*: it is a bad way of trying to make things cryptographically sound
+            - it can be broken quickly with *Frequency Analysis*
+        
