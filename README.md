@@ -197,21 +197,36 @@ print(lf)
 
 ### The General Problem Hash Tables Solve
 
-- TODO:
+- We have something we need to look up quickly
+    - Especialy something that would hinder your applications overall performance
 
 ### In Lieu of Linear Search
 
-- TODO:
+- Linear Search
+    - What if we have 5 elements?
+        - pretty much anything will work
+    - What if we have 5 trillion elements?
+        - Linear Search it is too slow `O(n)`
+        - BST not bad at `O(log n)` but we can do better
+        - Hash Tables is a winner with a `O(1)` Time Complexity
 
 ### Variations
 
 - Can apply to anything where reacquiring information is too time-consuming.
-
+    - Network cache
+        - it takes a while to go get a web page (or other data) over the network
+        - save it first time in a hashtable keyed by URL
+        - Then susiquent `Gets` are quite fast
+    - Memoization
+        - Slow Recursive functions `O(2^n) or worse *Fib(n)*
+        - Store
 - Can apply to cases where you have to index a number of records
-
+    - Show me all the people whose age is 30
+    - Dave: age of all people with the same age
 - Can apply to cases where you want to remove duplicates
-
+    - since there can only be one key. we can add the same key over and over and there will still be only 1 copy of that key
 - Can be used to track counts
+    - Key is the `Item` and the value is the `count`
 
 ### Challenges / Demos
 
