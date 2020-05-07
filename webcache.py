@@ -14,8 +14,6 @@
     - The web page `data` is the `value`
         - for our purposes the data will be a webpage
 
-
-
 """
 
 

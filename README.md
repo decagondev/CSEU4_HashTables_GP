@@ -193,8 +193,36 @@ print(lf)
 
     
 
+## Applications of Hash Tables
 
+### The General Problem Hash Tables Solve
 
+- TODO:
 
+### In Lieu of Linear Search
 
+- TODO:
 
+### Variations
+
+- Can apply to anything where reacquiring information is too time-consuming.
+
+- Can apply to cases where you have to index a number of records
+
+- Can apply to cases where you want to remove duplicates
+
+- Can be used to track counts
+
+### Challenges / Demos
+
+- *Memoization*
+
+- *Lookup Tables*
+
+- *Sorting*
+
+- *Letter Count*
+
+- *Indexing*
+
+- *Transposition Table*

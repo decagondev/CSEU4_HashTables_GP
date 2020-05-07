@@ -27,7 +27,16 @@
 - What is the Hash Table Load Factor and what can we do with it?
 - 5 min break
 - Hash Applications : A Web Client Cache
+- Wrap Up
 - 5 min break
 - Birthday Paradox [Time Permitting]
-- Wrap Up
+
+## Day 4
+- What problems can hash tables solve (talk)
+- 5 min break
+- List of some use cases
+- Breakout Rooms (Challenge)
+- 5 min break
+- some Demos (Time Permitting)
+- wrap up
 
